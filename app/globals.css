@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f1e7;
+  color: #4a3428;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus, in the accent color, on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #c8894a;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Reveal-on-scroll utility, paired with the useReveal hook */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Book-spine divider: a row of narrow "spines" used between sections */
+.spine-divider {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 22px;
+  overflow: hidden;
+}
+.spine-divider span {
+  display: block;
+  width: 5px;
+  border-radius: 2px 2px 0 0;
+}
+
+/* Custom page-turn corner used on cards */
+.page-corner {
+  position: relative;
+}
+.page-corner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 16px 16px;
+  border-color: transparent transparent #e7d7bc transparent;
+  transition: border-color 0.3s ease;
+}
+.page-corner:hover::after {
+  border-color: transparent transparent #c8894a transparent;
+}
+
+::selection {
+  background-color: #c8894a;
+  color: #f8f1e7;
+}
