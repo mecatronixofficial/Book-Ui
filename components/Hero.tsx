@@ -17,7 +17,7 @@ export default function Hero() {
         className="pointer-events-none absolute top-40 -left-32 h-72 w-72 rounded-full bg-brown/5 blur-3xl"
       />
 
-      <div className="mx-auto grid max-w-8xl items-center gap-10 px-5 py-10 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:py-20">
+      <div className="mx-auto grid max-w-8xl items-center gap-10 px-5 py-5 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:py-10">
         <Reveal>
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-sandal-card px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-brown-soft">
             A digital library, not a store
@@ -63,7 +63,7 @@ export default function Hero() {
 
       </div>
 
-      <div className="mx-auto max-w-8xl px-5 pb-16 sm:px-8 lg:pb-24">
+      <div className="mx-auto max-w-8xl px-5 pb-5 sm:px-8 lg:pb-10">
         <Reveal>
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
