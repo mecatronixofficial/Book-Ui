@@ -6,7 +6,7 @@
  */
 
 // Replace with the real business WhatsApp number, digits only, country code first.
-export const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+export const WHATSAPP_NUMBER = "12539219904";
 
 /**
  * Open WhatsApp with a pre-filled enquiry about a specific topic or service.

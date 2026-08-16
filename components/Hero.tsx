@@ -2,12 +2,11 @@
 
 import Image from "next/image";
 import { openWhatsApp } from "@/lib/whatsapp";
-import { featuredTopics } from "@/data/featuredTopics";
 import Reveal from "./Reveal";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-4 sm:pt-10">
+    <section id="home" className="relative overflow-hidden pt-4 ">
       {/* Ambient page-corner shapes */}
       <div
         aria-hidden="true"
@@ -24,8 +23,7 @@ export default function Hero() {
             A digital library, not a store
           </p>
           <h1 className="font-display text-4xl font-semibold leading-[1.08] text-brown-deep sm:text-5xl lg:text-[3.4rem]">
-            Discover Knowledge{" "}
-            <span className="italic text-gold-dark">Through Books</span>
+            Discover Knowledge
           </h1>
           <p className="mt-6 max-w-xl font-body text-base leading-relaxed text-brown-soft sm:text-lg">
             Explore useful book topics, reading resources and recommendations
@@ -34,21 +32,6 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#topics"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("#topics")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="group inline-flex items-center gap-2 rounded-full bg-brown px-6 py-3.5 text-sm font-medium text-sandal shadow-card transition-transform hover:-translate-y-0.5"
-            >
-              Explore Topics
-              <span className="transition-transform group-hover:translate-x-1">
-                &rarr;
-              </span>
-            </a>
             <button
               onClick={() => openWhatsApp("your books")}
               className="group inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-medium text-brown-deep shadow-card transition-transform hover:-translate-y-0.5 hover:bg-gold-dark"
@@ -62,45 +45,22 @@ export default function Hero() {
 
           <div className="mt-10 flex items-center gap-6 text-sm text-brown-soft">
             <div>
-              <p className="font-display text-2xl font-semibold text-brown-deep">10+</p>
-              <p>Book categories</p>
+              <p className="font-display text-2xl font-semibold text-brown-deep">100+</p>
+              <p>Categories</p>
             </div>
             <div className="h-8 w-px bg-sandal-line" />
             <div>
-              <p className="font-display text-2xl font-semibold text-brown-deep">6</p>
-              <p>Guidance services</p>
+              <p className="font-display text-2xl font-semibold text-brown-deep">500+</p>
+              <p>Clients</p>
             </div>
             <div className="h-8 w-px bg-sandal-line" />
             <div>
-              <p className="font-display text-2xl font-semibold text-brown-deep">1:1</p>
+              <p className="font-display text-2xl font-semibold text-brown-deep">24/7</p>
               <p>WhatsApp support</p>
             </div>
           </div>
         </Reveal>
 
-        <Reveal delay={120}>
-          <div className="relative mx-auto max-w-md lg:max-w-none">
-            <div className="page-corner overflow-hidden rounded-3xl border border-sandal-line bg-sandal-card shadow-card-hover">
-              <Image
-                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1200&auto=format&fit=crop"
-                alt="Stack of open books resting on a wooden table"
-                width={640}
-                height={760}
-                sizes="(min-width: 1024px) 40vw, 90vw"
-                className="h-[340px] w-full object-cover sm:h-[440px] lg:h-[520px]"
-                priority
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-sandal-line bg-sandal px-5 py-4 shadow-card sm:block">
-              <p className="font-display text-lg font-semibold text-brown-deep">
-                &ldquo;A good book is a friend.&rdquo;
-              </p>
-              <p className="mt-1 text-xs uppercase tracking-wide text-brown-soft">
-                Reading, for its own sake
-              </p>
-            </div>
-          </div>
-        </Reveal>
       </div>
 
       <div className="mx-auto max-w-8xl px-5 pb-16 sm:px-8 lg:pb-24">
@@ -111,43 +71,56 @@ export default function Hero() {
                 Featured
               </p>
               <h2 className="font-display text-2xl font-semibold text-brown-deep sm:text-3xl">
-                Popular Book Topics
+                Popular Book look our Brand
               </h2>
             </div>
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredTopics.map((topic, i) => (
-            <Reveal key={topic.title} delay={i * 70}>
-              <article className="page-corner group flex h-full flex-col overflow-hidden rounded-2xl border border-sandal-line bg-sandal-card shadow-card transition-shadow hover:shadow-card-hover">
-                <div className="relative h-44 w-full overflow-hidden">
-                  <Image
-                    src={topic.image}
-                    alt={`${topic.title} book collection`}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <h3 className="font-display text-lg font-semibold text-brown-deep">
-                    {topic.title}
-                  </h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-brown-soft">
-                    {topic.description}
-                  </p>
-                  <button
-                    onClick={() => openWhatsApp(topic.title)}
-                    className="mt-4 inline-flex w-fit items-center gap-2 rounded-full border border-gold px-4 py-2 text-xs font-medium text-brown-deep transition-colors hover:bg-gold hover:text-brown-deep"
-                  >
-                    WhatsApp Enquiry
-                  </button>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal delay={80}>
+          <div className="flex flex-col items-center justify-center gap-3 sm:gap-6">
+            <button
+              type="button"
+              onClick={() => openWhatsApp("your books")}
+              aria-label="Enquire on WhatsApp about this collection"
+              className="page-corner group relative aspect-[16/6] w-full overflow-hidden rounded-2xl border border-sandal-line bg-sandal-card shadow-card "
+            >
+              <Image
+                src="/banners/banner1.jpeg"
+                alt="Featured book banner"
+                fill
+                sizes="100vw"
+                className="object-cover "
+              />
+            </button>
+            <button
+              type="button"
+              onClick={() => openWhatsApp("your books")}
+              aria-label="Enquire on WhatsApp about this collection"
+              className="page-corner group relative aspect-[7/5] w-full overflow-hidden rounded-2xl border border-sandal-line bg-sandal-card shadow-card "
+            >
+              <Image
+                src="/banners/banner2.jpeg"
+                alt="Featured book banner"
+                fill
+                sizes="100vw"
+                className="object-cover "
+              />
+            </button>
+          </div>
+
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={() => openWhatsApp("your books")}
+              className="group inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-medium text-brown-deep shadow-card transition-transform hover:-translate-y-0.5 hover:bg-gold-dark"
+            >
+              Enquire on WhatsApp
+              <span className="transition-transform group-hover:translate-x-1">
+                &rarr;
+              </span>
+            </button>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

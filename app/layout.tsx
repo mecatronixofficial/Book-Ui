@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bookmark & Bind — Book Information, Guidance & Collections",
+  title: "Ricebook & Play — Book Information, Guidance & Collections",
   description:
     "Explore book topics, reading resources and recommendations for students, readers and institutions. Enquire instantly on WhatsApp — no shopping cart, just guidance.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "reading resources",
   ],
   openGraph: {
-    title: "Bookmark & Bind — Book Information, Guidance & Collections",
+    title: "Ricebook & Play — Book Information, Guidance & Collections",
     description:
       "A premium digital library of book topics and guidance. Enquire on WhatsApp for any book-related question.",
     type: "website",
