@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { openWhatsApp } from "@/lib/whatsapp";
+import { buildWhatsAppHref, openWhatsApp } from "@/lib/whatsapp";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,16 +24,12 @@ export default function Navbar() {
         aria-label="Primary"
       >
         <a
-          href="#home"
-          onClick={(e) => {
-            e.preventDefault();
-            document
-              .querySelector("#home")
-              ?.scrollIntoView({ behavior: "smooth", block: "start" });
-          }}
+          href={buildWhatsAppHref("your books")}
+          target="_blank"
+          rel="noopener noreferrer"
           className="font-display text-xl sm:text-2xl font-semibold tracking-wide text-sandal"
         >
-          Ricebook <span className="text-gold">&amp;</span> Play
+          Rizebook <span className="text-gold">&amp;</span> Play
         </a>
 
         <button
