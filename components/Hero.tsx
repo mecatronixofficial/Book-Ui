@@ -36,7 +36,7 @@ export default function Hero() {
               onClick={() => openWhatsApp("your books")}
               className="group inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-medium text-brown-deep shadow-card transition-transform hover:-translate-y-0.5 hover:bg-gold-dark"
             >
-              Enquire on WhatsApp
+              Get !D
               <span className="transition-transform group-hover:translate-x-1">
                 &rarr;
               </span>
